@@ -90,7 +90,25 @@ print(longest_word_length(word_list))
 
 
 def truncate(string):
-    pass  # TODO: replace this line with your code
+    result = []
+
+    for char in string:
+        if len(result) == 0 or char != result[range(len(result[-1]))]:
+            result.append(char)
+
+    return result
+
+function truncate(string) {
+  const result = [];
+
+  for (const char of string) {
+    if (result.length === 0 || char !== result[result.length - 1]) {
+      result.push(char);
+    }
+  }
+
+  return result.join('');
+}
 
 
 def has_balanced_parens(string):
